@@ -4,21 +4,27 @@
  */
 package inazumaeleven;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author polenzani.pietro
  */
 public class Giocatore extends Partita{
-    private int resistenza;
-    private int fisico;
-    private String nome;
+    protected int resistenza;
+    protected int fisico;
+    protected String nome;
+    protected String ruolo;
 
-    public Giocatore(int resistenza, int fisico, String nome, int spettacolo) {
-        super(spettacolo);
+    public Giocatore(int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
+        super(spettacolo, squadre);
         this.resistenza = resistenza;
         this.fisico = fisico;
         this.nome = nome;
+        this.ruolo = ruolo;
     }
+
+    
 
     
     

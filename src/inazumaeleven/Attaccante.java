@@ -4,6 +4,8 @@
  */
 package inazumaeleven;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author polenzani.pietro
@@ -19,4 +21,24 @@ public class Attaccante extends Giocatore{
     }
 
     
+
+    
+
+    public int tira(){
+        if(this.precisioneTiro>75){
+            if(this.potenzaTiro>60){
+                spettacolo-=5;
+            } 
+            else if(this.potenzaTiro>80){
+                spettacolo+=10;
+            }
+            else {
+                spettacolo += potenzaTiro;
+            }
+        }
+        else{
+            spettacolo-=spettacolo/2;
+        }
+        return spettacolo;
+    }
 }

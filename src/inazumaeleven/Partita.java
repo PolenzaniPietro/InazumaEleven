@@ -4,16 +4,21 @@
  */
 package inazumaeleven;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author polenzani.pietro
  */
 public class Partita{
     protected int spettacolo;
-
-    public Partita(int spettacolo) {
+    protected ArrayList <Squadra> squadre;
+    
+    
+    public Partita(int spettacolo ,ArrayList <Squadra> squadre) {
         this.spettacolo = spettacolo;
+        this.squadre=squadre;
     }
     
-    
+    (Attaccante)g.tira();
 }

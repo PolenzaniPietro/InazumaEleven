@@ -4,6 +4,8 @@
  */
 package inazumaeleven;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author polenzani.pietro
@@ -12,11 +14,13 @@ public class Centrocampista extends Giocatore{
     private int precisionePassaggio;
     private int dribling;
 
-    public Centrocampista(int precisionePassaggio, int dribling, int resistenza, int fisico, String nome, int spettacolo) {
-        super(resistenza, fisico, nome, spettacolo);
+    public Centrocampista(int precisionePassaggio, int dribling, int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
+        super(resistenza, fisico, nome, ruolo, spettacolo, squadre);
         this.precisionePassaggio = precisionePassaggio;
         this.dribling = dribling;
     }
+
+    
 
     
     

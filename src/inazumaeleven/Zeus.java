@@ -13,10 +13,12 @@ import java.util.ArrayList;
 public class Zeus extends Squadra{
     private int mlNettare;
 
-    public Zeus(int mlNettare, ArrayList<Giocatore> giocatori, int spettacolo) {
-        super(giocatori, spettacolo);
+    public Zeus(int mlNettare, ArrayList<Giocatore> giocatori, int spettacolo, ArrayList<Squadra> squadre) {
+        super(giocatori, spettacolo, squadre);
         this.mlNettare = mlNettare;
     }
+
+   
 
     
     

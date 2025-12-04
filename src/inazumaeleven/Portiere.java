@@ -4,6 +4,8 @@
  */
 package inazumaeleven;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author polenzani.pietro
@@ -12,13 +14,27 @@ public class Portiere extends Giocatore{
     private int riflessi;
     private int elevazione;
 
+    
+
+
+   
+   
+
     public Portiere(int riflessi, int elevazione, int resistenza, int fisico, String nome, int spettacolo) {
         super(resistenza, fisico, nome, spettacolo);
         this.riflessi = riflessi;
         this.elevazione = elevazione;
     }
+    
+    
+         /*
+    public int paraTiro(){
+        if(this.riflessi>80){
+            
+        }
+    }
 
-  
+  */
     
     
 }

@@ -14,11 +14,13 @@ public class RoyaleAccademy extends Squadra{
     private int scorrettezza;
     private boolean rayDark;
 
-    public RoyaleAccademy(int scorrettezza, boolean rayDark, ArrayList<Giocatore> giocatori, int spettacolo) {
-        super(giocatori, spettacolo);
+    public RoyaleAccademy(int scorrettezza, boolean rayDark, ArrayList<Giocatore> giocatori, int spettacolo, ArrayList<Squadra> squadre) {
+        super(giocatori, spettacolo, squadre);
         this.scorrettezza = scorrettezza;
         this.rayDark = rayDark;
     }
+
+   
 
     public int giocaSporco(boolean rayDark){
         this.rayDark=rayDark;
