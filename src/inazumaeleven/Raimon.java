@@ -14,29 +14,32 @@ public class Raimon extends Squadra{
     private int lvlAmicizia;
     private boolean sconfitta;
 
-    public Raimon(int lvlAmicizia, boolean sconfitta, ArrayList<Giocatore> giocatori, int spettacolo, ArrayList<Squadra> squadre) {
-        super(giocatori, spettacolo, squadre);
+    public Raimon(int lvlAmicizia, boolean sconfitta, ArrayList<Giocatore> giocatori) {
+        super(giocatori);
         this.lvlAmicizia = lvlAmicizia;
         this.sconfitta = sconfitta;
     }
+
+    
 
  
 
     
 
     public int amicizia(boolean sconfitta,int lvlAmicizia) {
+        int a=0;
         this.sconfitta=sconfitta;
         this.lvlAmicizia=lvlAmicizia;
         if(sconfitta){
             if(lvlAmicizia>75){
-                this.spettacolo+=this.giocatori.size()*2;
+                a+=this.giocatori.size()*2;
             }
            
         }
         else if(lvlAmicizia>75){
-                this.spettacolo+=this.giocatori.size();
+                a+=this.giocatori.size();
             }
-        return spettacolo;
+        return a;
     
     }
     

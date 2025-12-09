@@ -10,13 +10,14 @@ import java.util.ArrayList;
  *
  * @author polenzani.pietro
  */
-public class Squadra extends Partita{
+public class Squadra {
     protected ArrayList <Giocatore> giocatori;
 
-    public Squadra(ArrayList<Giocatore> giocatori, int spettacolo, ArrayList<Squadra> squadre) {
-        super(spettacolo, squadre);
+    public Squadra(ArrayList<Giocatore> giocatori) {
         this.giocatori = giocatori;
     }
+
+    
 
     
 
@@ -37,10 +38,11 @@ public class Squadra extends Partita{
         }
             return null;                  
     } 
-    public int tiroAttaccante(){
-        if(this.checkPortiere()&& this.checkAttaccante()){
+    public void tiroAttaccante(){
+        this.checkAttaccante();
+        if(this.checkPortiere()){
+             //implementare il tiro
+            }
             
         }
-        return spettacolo;
-    }
 }

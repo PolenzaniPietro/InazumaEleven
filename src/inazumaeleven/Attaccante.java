@@ -14,15 +14,14 @@ public class Attaccante extends Giocatore{
     private int potenzaTiro;
     private int precisioneTiro;
 
-    public Attaccante(int potenzaTiro, int precisioneTiro, int resistenza, int fisico, String nome, int spettacolo) {
-        super(resistenza, fisico, nome, spettacolo);
+    public Attaccante(int potenzaTiro, int precisioneTiro, int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
+        super(resistenza, fisico, nome, ruolo, spettacolo, squadre);
         this.potenzaTiro = potenzaTiro;
         this.precisioneTiro = precisioneTiro;
     }
 
     
 
-    
 
     public int tira(){
         if(this.precisioneTiro>75){

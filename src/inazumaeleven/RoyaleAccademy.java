@@ -14,15 +14,18 @@ public class RoyaleAccademy extends Squadra{
     private int scorrettezza;
     private boolean rayDark;
 
-    public RoyaleAccademy(int scorrettezza, boolean rayDark, ArrayList<Giocatore> giocatori, int spettacolo, ArrayList<Squadra> squadre) {
-        super(giocatori, spettacolo, squadre);
+    public RoyaleAccademy(int scorrettezza, boolean rayDark, ArrayList<Giocatore> giocatori) {
+        super(giocatori);
         this.scorrettezza = scorrettezza;
         this.rayDark = rayDark;
     }
 
    
 
+   
+
     public int giocaSporco(boolean rayDark){
+        int a =0;
         this.rayDark=rayDark;
         if(rayDark){
             scorrettezza+=scorrettezza;
@@ -31,15 +34,15 @@ public class RoyaleAccademy extends Squadra{
             scorrettezza-=10;
         }
         if(scorrettezza>150){
-            spettacolo-= this.giocatori.size()*5;
+            a-= this.giocatori.size()*5;
         }
         else if (scorrettezza>80){
-            spettacolo-= this.giocatori.size();
+            a-= this.giocatori.size();
         }
         else{
-            spettacolo+=this.giocatori.size();
+            a+=this.giocatori.size();
         }
-        return spettacolo;
+        return a;
     }
     
     

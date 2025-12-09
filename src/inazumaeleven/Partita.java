@@ -13,12 +13,17 @@ import java.util.ArrayList;
 public class Partita{
     protected int spettacolo;
     protected ArrayList <Squadra> squadre;
-    
-    
-    public Partita(int spettacolo ,ArrayList <Squadra> squadre) {
+
+    public Partita(int spettacolo, ArrayList<Squadra> squadre) {
         this.spettacolo = spettacolo;
-        this.squadre=squadre;
-    }
+        this.squadre = squadre;
+        }
     
-    (Attaccante)g.tira();
 }
+    
+    
+    
+   
+    
+    
+    
