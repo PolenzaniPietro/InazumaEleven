@@ -24,9 +24,9 @@ public class Giocatore extends Partita{
         this.ruolo = ruolo;
     }
 
-    
-
-    
-    
-    
+    public Giocatore allenamento(){
+        this.fisico+=10;
+        this.resistenza+=10;
+        return this;
+    } 
 }

@@ -20,13 +20,23 @@ public class Portiere extends Giocatore{
         this.elevazione = elevazione;
     }
     
-        /*
+        
     public int paraTiro(){
+        int a=0;
         if(this.riflessi>80){
-            
+            if(this.elevazione>60){
+                a+=30;
+            }
+            else if(this.elevazione>40){
+                a+=10;
+            }
         }
+        else {
+            a+=20;
+        }
+        return a;
     }
 
-  */
+ 
     
 }

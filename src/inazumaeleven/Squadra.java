@@ -16,18 +16,24 @@ public class Squadra {
     public Squadra(ArrayList<Giocatore> giocatori) {
         this.giocatori = giocatori;
     }
-
+    
+    public void acquistaGiocatore(Giocatore g){
+         giocatori.add(g);
+    }
+    public void svincolaGiocatore(Giocatore g){
+         giocatori.remove(g);
+    }
     
 
     
 
-    public boolean checkPortiere(){
+    public Giocatore checkPortiere(){
         for (Giocatore g : giocatori){
             if(g.ruolo.equals("portiere")){
-                return true;
+                return g;
             }
         }
-            return false;                  
+            return null;                  
     } 
     
     public Giocatore checkAttaccante(){
@@ -39,10 +45,15 @@ public class Squadra {
             return null;                  
     } 
     public void tiroAttaccante(){
-        this.checkAttaccante();
-        if(this.checkPortiere()){
-             //implementare il tiro
-            }
-            
+        if(this.checkAttaccante()!=null){
+            Attaccante.tira();
         }
+                       
+    }
+    public void parataPortiere(){
+        if(this.checkPortiere() != null){
+            Portiere.paraTiro();
+        }
+        
+    }
 }
