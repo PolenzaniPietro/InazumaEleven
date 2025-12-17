@@ -14,30 +14,35 @@ public class Attaccante extends Giocatore{
     private int potenzaTiro;
     private int precisioneTiro;
 
-    public Attaccante(int potenzaTiro, int precisioneTiro, int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
-        super(resistenza, fisico, nome, ruolo, spettacolo, squadre);
+    public Attaccante(int potenzaTiro, int precisioneTiro, int resistenza, int fisico, String nome, String ruolo) {
+        super(resistenza, fisico, nome, ruolo);
         this.potenzaTiro = potenzaTiro;
         this.precisioneTiro = precisioneTiro;
     }
 
+
     
 
 
+
+    
+
     public int tira(){
+        int a =0;
         if(this.precisioneTiro>75){
             if(this.potenzaTiro>60){
-                spettacolo-=5;
+                a-=5;
             } 
             else if(this.potenzaTiro>80){
-                spettacolo+=10;
+                a+=10;
             }
             else {
-                spettacolo += potenzaTiro;
+                a += potenzaTiro;
             }
         }
         else{
-            spettacolo-=spettacolo/2;
+            a-=a/2;
         }
-        return spettacolo;
+        return a;
     }
 }

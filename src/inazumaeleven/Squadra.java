@@ -35,7 +35,14 @@ public class Squadra {
         }
             return null;                  
     } 
-    
+    public Giocatore checkCentrocampista(){
+        for (Giocatore g : giocatori){
+            if(g.ruolo.equals("centrocampista")){
+                return g;
+            }
+        }
+            return null;                  
+    } 
     public Giocatore checkAttaccante(){
         for (Giocatore g : giocatori){
             if(g.ruolo.equals("attaccante")){
@@ -44,16 +51,30 @@ public class Squadra {
         }
             return null;                  
     } 
-    public void tiroAttaccante(){
-        if(this.checkAttaccante()!=null){
-            Attaccante.tira();
-        }
-                       
+    public int tiroAttaccante() {
+    Giocatore a = this.checkAttaccante();
+
+    if (a instanceof Attaccante) {
+        Attaccante attaccante = (Attaccante) a;
+         return attaccante.tira();
     }
-    public void parataPortiere(){
-        if(this.checkPortiere() != null){
-            Portiere.paraTiro();
+    return 0;
+}
+
+    public int parataPortiere(){
+        Giocatore a = this.checkPortiere();
+        if( a instanceof Portiere){
+            Portiere portiere = (Portiere) a;
+            return portiere.paraTiro();
         }
-        
+        return 0;
+    }
+    public int driblingCentrocampista(){
+        Giocatore a = this.checkCentrocampista();
+        if( a instanceof Centrocampista){
+            Centrocampista centrocampista = (Centrocampista) a;
+            return centrocampista.scartaAvversario();
+        }
+        return 0;
     }
 }

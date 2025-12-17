@@ -14,16 +14,22 @@ public class Portiere extends Giocatore{
     private int riflessi;
     private int elevazione;
 
-    public Portiere(int riflessi, int elevazione, int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
-        super(resistenza, fisico, nome, ruolo, spettacolo, squadre);
+    public Portiere(int riflessi, int elevazione, int resistenza, int fisico, String nome, String ruolo) {
+        super(resistenza, fisico, nome, ruolo);
         this.riflessi = riflessi;
         this.elevazione = elevazione;
     }
+
     
+
+    
+    
+       
         
     public int paraTiro(){
         int a=0;
         if(this.riflessi>80){
+            
             if(this.elevazione>60){
                 a+=30;
             }
@@ -37,6 +43,7 @@ public class Portiere extends Giocatore{
         return a;
     }
 
+  
  
     
 }

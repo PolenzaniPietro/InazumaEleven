@@ -10,23 +10,25 @@ import java.util.ArrayList;
  *
  * @author polenzani.pietro
  */
-public class Giocatore extends Partita{
+public class Giocatore {
     protected int resistenza;
     protected int fisico;
     protected String nome;
     protected String ruolo;
 
-    public Giocatore(int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
-        super(spettacolo, squadre);
+    public Giocatore(int resistenza, int fisico, String nome, String ruolo) {
         this.resistenza = resistenza;
         this.fisico = fisico;
         this.nome = nome;
         this.ruolo = ruolo;
     }
 
+    
+    
+
     public Giocatore allenamento(){
         this.fisico+=10;
         this.resistenza+=10;
         return this;
-    } 
+    }     
 }

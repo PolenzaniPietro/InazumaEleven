@@ -14,11 +14,13 @@ public class Difensore extends Giocatore {
     private int contrasto;
     private int letturaDifensiva;
 
-    public Difensore(int contrasto, int letturaDifensiva, int resistenza, int fisico, String nome, String ruolo, int spettacolo, ArrayList<Squadra> squadre) {
-        super(resistenza, fisico, nome, ruolo, spettacolo, squadre);
+    public Difensore(int contrasto, int letturaDifensiva, int resistenza, int fisico, String nome, String ruolo) {
+        super(resistenza, fisico, nome, ruolo);
         this.contrasto = contrasto;
         this.letturaDifensiva = letturaDifensiva;
     }
+
+   
 
     
 

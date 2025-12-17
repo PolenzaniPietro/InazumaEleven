@@ -18,7 +18,18 @@ public class Partita{
         this.spettacolo = spettacolo;
         this.squadre = squadre;
         }
-    
+     public int tiro(){
+         for( Squadra squadra: squadre){
+             spettacolo= squadra.tiroAttaccante();
+         }
+         return spettacolo;        
+     }
+     public int parata(){
+         for( Squadra squadra: squadre){
+             spettacolo= squadra.parataPortiere();
+         }
+         return spettacolo;   
+     }
 }
     
     
