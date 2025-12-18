@@ -20,12 +20,24 @@ public class Attaccante extends Giocatore{
         this.precisioneTiro = precisioneTiro;
     }
 
+    public void setPotenzaTiro(int potenzaTiro) {
+        this.potenzaTiro = potenzaTiro;
+    }
+
+    public void setPrecisioneTiro(int precisioneTiro) {
+        this.precisioneTiro = precisioneTiro;
+    }
 
     
+    public int getPotenzaTiro() {
+        return potenzaTiro;
+    }
+
+    public int getPrecisioneTiro() {
+        return precisioneTiro;
+    }
 
 
-
-    
 
     public int tira(){
         int a =0;

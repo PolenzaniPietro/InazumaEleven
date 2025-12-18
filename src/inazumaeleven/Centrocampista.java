@@ -20,6 +20,24 @@ public class Centrocampista extends Giocatore{
         this.dribling = dribling;
     }
 
+    public void setPrecisionePassaggio(int precisionePassaggio) {
+        this.precisionePassaggio = precisionePassaggio;
+    }
+
+    public void setDribling(int dribling) {
+        this.dribling = dribling;
+    }
+
+    
+    public int getPrecisionePassaggio() {
+        return precisionePassaggio;
+    }
+
+    public int getDribling() {
+        return dribling;
+    }
+
+    
     public int scartaAvversario(){
         int a=0;
         if(dribling > 90){
@@ -27,6 +45,19 @@ public class Centrocampista extends Giocatore{
         }
         else if(dribling > 75){
             a+=20;
+        }
+        else {
+            a-=10;
+        }
+        return a;
+    }
+    public int passaPalla(){
+        int a=0;
+        if(precisionePassaggio > 90){
+            a+=30;
+        }
+        else if(precisionePassaggio > 75){
+            a+=15;
         }
         else {
             a-=10;

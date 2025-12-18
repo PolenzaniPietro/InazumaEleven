@@ -23,6 +23,31 @@ public class Giocatore {
         this.ruolo = ruolo;
     }
 
+    public void setResistenza(int resistenza) {
+        this.resistenza = resistenza;
+    }
+
+    public void setFisico(int fisico) {
+        this.fisico = fisico;
+    }
+
+    public void setRuolo(String ruolo) {
+        this.ruolo = ruolo;
+    }
+    
+
+    public int getResistenza() {
+        return resistenza;
+    }
+
+    public int getFisico() {
+        return fisico;
+    }
+
+    public String getRuolo() {
+        return ruolo;
+    }
+
     
     
 

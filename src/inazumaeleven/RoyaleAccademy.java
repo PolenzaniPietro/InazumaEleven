@@ -20,6 +20,23 @@ public class RoyaleAccademy extends Squadra{
         this.rayDark = rayDark;
     }
 
+    public int getScorrettezza() {
+        return scorrettezza;
+    }
+
+    public void setScorrettezza(int scorrettezza) {
+        this.scorrettezza = scorrettezza;
+    }
+
+    public boolean isRayDark() {
+        return rayDark;
+    }
+
+    public void setRayDark(boolean rayDark) {
+        this.rayDark = rayDark;
+    }
+
+    
    
 
    

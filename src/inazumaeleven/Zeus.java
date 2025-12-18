@@ -18,6 +18,15 @@ public class Zeus extends Squadra{
         this.mlNettare = mlNettare;
     }
 
+    public int getMlNettare() {
+        return mlNettare;
+    }
+
+    public void setMlNettare(int mlNettare) {
+        this.mlNettare = mlNettare;
+    }
+
+    
     public int dopati(){
         int a=0;
         if(mlNettare>=80){

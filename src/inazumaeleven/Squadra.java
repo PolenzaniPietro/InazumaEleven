@@ -43,6 +43,14 @@ public class Squadra {
         }
             return null;                  
     } 
+    public Giocatore checkDifensore(){
+        for (Giocatore g : giocatori){
+            if(g.ruolo.equals("difensore")){
+                return g;
+            }
+        }
+            return null;                  
+    }
     public Giocatore checkAttaccante(){
         for (Giocatore g : giocatori){
             if(g.ruolo.equals("attaccante")){
@@ -77,4 +85,36 @@ public class Squadra {
         }
         return 0;
     }
+    public int passaggioCentrocampista(){
+         Giocatore a = this.checkCentrocampista();
+        if( a instanceof Centrocampista){
+            Centrocampista centrocampista = (Centrocampista) a;
+            return centrocampista.passaPalla();
+        }
+        return 0;       
+    }
+    public ArrayList<Giocatore> allenamento(){
+        for(Giocatore giocatore : giocatori){
+            giocatore.allenamento();
+        }
+        return giocatori;
+    }
+    public int contrasto(){
+         Giocatore a = this.checkDifensore();
+        if( a instanceof Difensore){
+            Difensore difensore = (Difensore) a;
+            return difensore.contrasta();
+        }
+        return 0;       
+    }
+    public int intercetta(){
+         Giocatore a = this.checkDifensore();
+        if( a instanceof Difensore){
+            Difensore difensore = (Difensore) a;
+            return difensore.intercettaPalla();
+        }
+        return 0;       
+    }
+
+    
 }

@@ -17,7 +17,11 @@ public class Partita{
     public Partita(int spettacolo, ArrayList<Squadra> squadre) {
         this.spettacolo = spettacolo;
         this.squadre = squadre;
-        }
+    }
+
+    
+    
+    
      public int tiro(){
          for( Squadra squadra: squadre){
              spettacolo= squadra.tiroAttaccante();
@@ -30,11 +34,35 @@ public class Partita{
          }
          return spettacolo;   
      }
+     public int passaggio(){
+         for( Squadra squadra: squadre){
+             spettacolo=squadra.passaggioCentrocampista();
+         }
+         return spettacolo;
+     }
+     public int dribla(){
+         for( Squadra squadra: squadre){
+             spettacolo=squadra.driblingCentrocampista();
+         }
+         return spettacolo;
+     }
+     public ArrayList<Squadra> allenamento(){
+         for( Squadra squadra: squadre){
+             squadra.allenamento();
+         }
+         return squadre;
+     }
+     public int contrasta(){
+         for( Squadra squadra: squadre){
+             spettacolo= squadra.contrasto();
+         }
+         return spettacolo;
+     }
+     public int rubaPalla(){
+         for( Squadra squadra: squadre){
+             spettacolo = squadra.intercetta();
+         }
+         return spettacolo;
+     }
+     
 }
-    
-    
-    
-   
-    
-    
-    

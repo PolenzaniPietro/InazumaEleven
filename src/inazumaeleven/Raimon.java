@@ -20,6 +20,23 @@ public class Raimon extends Squadra{
         this.sconfitta = sconfitta;
     }
 
+    public int getLvlAmicizia() {
+        return lvlAmicizia;
+    }
+
+    public void setLvlAmicizia(int lvlAmicizia) {
+        this.lvlAmicizia = lvlAmicizia;
+    }
+
+    public boolean isSconfitta() {
+        return sconfitta;
+    }
+
+    public void setSconfitta(boolean sconfitta) {
+        this.sconfitta = sconfitta;
+    }
+
+    
     
 
  
